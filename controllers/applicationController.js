@@ -3,6 +3,7 @@ import ErrorHandler from "../middlewares/error.js";
 import { Application } from "../models/applicationSchema.js";
 import cloudinary from 'cloudinary';
 import { Job } from "../models/jobSchema.js";
+
 export const postApplication = catchAsyncError(async (req, res, next) => {
   const { role } = req.user;
   if (role === "Employer") {
